@@ -766,7 +766,7 @@ a:focus {
 .grid-item.large img {
   width: 100%;
   display: block;
-  border-radius: var(--border-radius);
+  border-radius: 0;
 }
 
 
@@ -798,7 +798,7 @@ a:focus {
 .grid-item video {
   width: 100%;
   display: block;
-  border-radius: var(--border-radius);
+  border-radius: 0;
 }
 
 @media screen and (max-width: 768px) {
