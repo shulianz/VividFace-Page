@@ -146,10 +146,7 @@
                 Video Face Enhancement</h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  Shulian Zhang<sup>1,2</sup>,
-                </span>
-                <span class="author-block">
-                  <a href="https://www.guoyongcs.com">Yong Guo</a><sup>2</sup>,
+                  Shulian Zhang<sup>1</sup>,
                 </span>
                 <span class="author-block">
                   Long Peng<sup>2</sup>,
@@ -161,25 +158,31 @@
                   Ye Chen<sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  Jie Li<sup>1,2</sup>,
+                  Jie Li<sup>1</sup>,
+                </span><br>
+                <span class="author-block">
+                  Wenbo Li<sup>3</sup>,
                 </span>
                 <span class="author-block">
-                  Wenbo Li<sup>2</sup>,
-                </span>
-                <span class="author-block">
-                  Xiao Zhang<sup>2</sup>,
-                </span>
-                <span class="author-block">
-                  Yulun Zhang<sup>2</sup>,
+                  Yulun Zhang<sup>4</sup>,
                 </span>
                 <span class="author-block">
                   Jian Chen<sup>1</sup>
+                </span>
+                <span class="author-block">
+                  <a href="https://www.guoyongcs.com">Yong Guo</a><sup>5</sup>,
                 </span>
               </div>
 
               <div class="is-size-5 publication-authors">
                 <!-- TODO: Replace with your institution and conference/journal info -->
-                <span class="author-block"><sup>1</sup>South China University of China<br><sup>2</sup>Huawei</span>
+                <span class="author-block">
+                  <sup>1</sup>South China University of Technology<br>
+                  <sup>2</sup>University of Science and Technology of China<br>
+                  <sup>3</sup>Chinese University of Hong Kong<br>
+                  <sup>4</sup>Shanghai Jiao Tong University<br>
+                  <sup>5</sup>Max Planck Institute for Infromatics<br>
+                </span>
                 <!-- TODO: Remove this line if no equal contribution -->
                 <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
               </div>
@@ -242,8 +245,8 @@
         <div class="hero-body">
 
           <!-- 图片 -->
-          <div class="results-carousel">
-            <div class="item">
+          <div class="figure-wrapper">
+            <div class="grid-item large">
               <img src="static/images/figure1.pdf" alt="VividFace teaser">
             </div>
           </div>
@@ -308,9 +311,9 @@
           <h2 class="title is-3 has-text-centered">Pipeline</h2>
 
           <!-- 图片 -->
-          <div class="results-carousel">
-            <div class="item">
-              <img src="static/images/framework1.pdf" alt="VividFace teaser">
+          <div class="figure-wrapper">
+            <div class="grid-item large">
+              <img src="static/images/framework1.pdf" alt="VividFace pipeline">
             </div>
           </div>
 
@@ -340,58 +343,39 @@
     <!-- Video carousel -->
     <section class="hero is-light">
       <div class="hero-body">
-        <div class="container">
+        <div class="container is-max-desktop">
           <h2 class="title is-3 has-text-centered">Visualization</h2>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-video1">
-              <!-- TODO: Add poster image for better preview -->
-              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
-                <source src="static/videos/1.mp4" type="video/mp4">
-              </video>
+
+          <div class="results-grid">
+
+            <div class="grid-item">
+              <video src="static/videos/1.mp4" controls muted loop playsinline></video>
             </div>
-            <div class="item item-video2">
-              <!-- TODO: Add poster image for better preview -->
-              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
-                <source src="static/videos/2.mp4" type="video/mp4">
-              </video>
+
+            <div class="grid-item">
+              <video src="static/videos/2.mp4" controls muted loop playsinline></video>
             </div>
-            <div class="item item-video3">
-              <!-- TODO: Add poster image for better preview -->
-              <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
-                <source src="static/videos/3.mp4" type="video/mp4">
-              </video>
+
+            <div class="grid-item">
+              <video src="static/videos/3.mp4" controls muted loop playsinline></video>
             </div>
-            <div class="item item-video4">
-              <!-- TODO: Add poster image for better preview -->
-              <video poster="" id="video4" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
-                <source src="static/videos/4.mp4" type="video/mp4">
-              </video>
+
+            <div class="grid-item">
+              <video src="static/videos/4.mp4" controls muted loop playsinline></video>
             </div>
-            <div class="item item-video5">
-              <!-- TODO: Add poster image for better preview -->
-              <video poster="" id="video5" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
-                <source src="static/videos/5.mp4" type="video/mp4">
-              </video>
+
+            <div class="grid-item">
+              <video src="static/videos/5.mp4" controls muted loop playsinline></video>
             </div>
-            <div class="item item-video6">
-              <!-- TODO: Add poster image for better preview -->
-              <video poster="" id="video6" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
-                <source src="static/videos/6.mp4" type="video/mp4">
-              </video>
+
+            <div class="grid-item">
+              <video src="static/videos/6.mp4" controls muted loop playsinline></video>
             </div>
-            <div class="item item-video7">
-              <!-- TODO: Add poster image for better preview -->
-              <video poster="" id="video7" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
-                <source src="static/videos/7.mp4" type="video/mp4">
-              </video>
+
+            <div class="grid-item">
+              <video src="static/videos/7.mp4" controls muted loop playsinline></video>
             </div>
+
           </div>
         </div>
       </div>
