@@ -81,7 +81,10 @@ body {
   box-shadow: var(--shadow-lg);
   background: var(--primary-color) !important;
 } */
-
+.content strong {
+  color: var(--text-primary);   /* 和正文一致（推荐） */
+  font-weight: 600;
+}
 /* 基础按钮 */
 .button.is-dark {
   background: #111 !important;

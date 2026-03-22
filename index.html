@@ -40,7 +40,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>VividFace: High-Quality and Efficient One-Step Diffusion For Video Face Enhancement</title>
+  <title>VividFace: Face-Aware One-Step Diffusion for High-Fidelity Video Face Enhancement</title>
 
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -88,53 +88,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
     <section class="hero is-small">
@@ -146,8 +99,8 @@
               <!-- Logo -->
               <img src="static/images/icon.png" class="paper-logo" alt="VividFace logo">
 
-              <h1 class="title is-1 publication-title">VividFace: High-Quality and Efficient One-Step Diffusion For
-                Video Face Enhancement</h1>
+              <h1 class="title is-1 publication-title">VividFace: Face-Aware One-Step Diffusion for High-Fidelity Video
+                Face Enhancement</h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
                   Shulian Zhang<sup>1</sup>,
@@ -244,28 +197,7 @@
       </div>
     </section>
 
-    <section class="hero teaser is-small">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
 
-          <!-- 图片 -->
-          <div class="figure-wrapper">
-            <div class="grid-item large">
-              <img src="static/images/figure1.png" alt="VividFace teaser">
-            </div>
-          </div>
-
-          <!-- 描述 -->
-          <div class="content has-text-justified">
-            The left side shows a visual comparison between VividFace and existing video face restoration methods,
-            illustrating that VividFace produces highly realistic and visually pleasing human eyes.
-            The right side compares model inference time, parameter count, and IDS performance across different methods.
-            VividFace achieves best performance, fastest speed, and comparable model parameter.
-          </div>
-
-        </div>
-      </div>
-    </section>
 
 
     <!-- Video carousel -->
@@ -319,30 +251,28 @@
             <div class="content has-text-justified">
               <!-- TODO: Replace with your paper abstract -->
               <p>
-                Video Face Enhancement (VFE) aims to restore high-quality facial regions from degraded video sequences,
+                Video Face Enhancement (VFE) aims to restore high-quality facial details from degraded video sequences,
                 enabling a wide range of practical applications. Despite substantial progress in the field, current
-                methods that primarily rely on video super-resolution and generative frameworks continue to face three
-                fundamental challenges: (1) computational inefficiency caused by iterative multi-step denoising in
-                diffusion models; (2) faithfully modeling intricate facial textures while preserving temporal
-                consistency; and (3) limited model generalization due to the lack of high-quality face video training
-                data.
+                methods that primarily rely on video super-resolution and generative frameworks face three fundamental
+                challenges: (1) computational inefficiency caused by iterative multi-step denoising in diffusion models;
+                (2) insufficient recovery of fine-grained facial textures; and (3) poor restoration quality due to the
+                lack of high-quality face video training data.
               </p>
               <p>
-                To address these challenges, we propose VividFace, a novel and efficient one-step diffusion framework
-                for VFE. Built upon the pretrained WANX video generation model, VividFace reformulates the traditional
-                multi-step diffusion process as a single-step flow matching paradigm that directly maps degraded inputs
-                to high-quality outputs with significantly reduced inference time.
+                To address these challenges, we propose VividFace, a one-step diffusion framework that
+                reformulates a text-to-video generation model into a single-step generator with switchable face-aware
+                guidance that persistently focuses optimization on perceptually critical facial regions across both
+                latent
+                and pixel spaces.
               </p>
               <p>
-                To enhance facial detail recovery, we introduce a Joint Latent-Pixel Face-Focused Training strategy that
-                constructs spatiotemporally aligned facial masks to guide optimization toward critical facial regions in
-                both latent and pixel spaces. Furthermore, we develop an MLLM-driven automated filtering pipeline that
-                produces MLLM-Face90, a meticulously curated high-quality face video dataset, ensuring models learn from
-                photorealistic facial textures. Extensive experiments demonstrate that VividFace achieves superior
-                performance in perceptual quality, identity preservation, and temporal consistency across both synthetic
-                and real-world benchmarks. We will publicly release our code, models, and dataset to support future
-                research.
-              </p>
+                Furthermore, we propose a human-aligned MLLM-driven data curation pipeline that leverages the video
+                understanding capabilities of Multimodal Large Language Models (MLLMs) and iteratively refines scoring
+                criteria through lightweight human-in-the-loop calibration to align quality judgments with human
+                perceptual expectations, yielding a high-quality face video dataset MLLM-Face90.
+                Extensive experiments demonstrate that VividFace achieves superior performance in perceptual quality,
+                identity preservation, and temporal consistency across both synthetic and real-world benchmarks, while
+                achieving a $12\times$ inference speedup over state-of-the-art diffusion-based VFE methods.
               </p>
             </div>
           </div>
@@ -367,18 +297,18 @@
           <!-- 描述 -->
           <div class="content has-text-justified">
             <p>
-              <strong>Overview of our VividFace framework.</strong> VividFace is a face-aware one-step video face
-              enhancement framework built upon a flow-matching formulation. Given degraded input frames, the model first
-              encodes them into the latent space, where a DiT-based network learns a single-step velocity field to
-              transform degraded latent representations into high-quality ones. To guide the enhancement process, facial
-              masks are extracted in the pixel space and then geometrically aligned to the latent space to match the
-              VAE’s spatiotemporal compression, providing structure-aware supervision during latent optimization.
-
-              In the second stage, the restored latent representations are decoded back to the pixel space, where
-              further refinement is performed to enhance fine-grained facial details and perceptual quality. The same
-              face-aware guidance is applied in the pixel space to ensure consistent structural enhancement. This
-              two-stage design enables VividFace to achieve efficient and high-quality restoration while preserving
-              temporal consistency and facial fidelity.
+              <strong>Overview of our VividFace framework.</strong> VividFace is a face-aware one-step enhancement
+              method built upon a flow-matching formulation.
+              <strong>Middle:</strong> Facial masks are first extracted in the pixel space (<i>M</i><sub>p</sub>) and
+              then geometrically aligned to the latent space (<i>M</i><sub>l</sub>) to match the VAE’s spatiotemporal
+              compression.
+              <strong>Top:</strong> In the first stage (Latent-space Optimization), the DiT model learns a single-step
+              velocity field to transform the degraded latent <i>z</i><sub>l</sub> into the restored latent
+              ẑ<sub>h</sub>. This process is supervised by our switchable face-aware guidance using
+              <i>M</i><sub>l</sub>.
+              <strong>Bottom:</strong> In the second stage (Pixel-space Refinement), the decoded video x̂<sub>h</sub>
+              undergoes fine-grained optimization where the switchable guidance is applied using <i>M</i><sub>p</sub> to
+              further enhance facial textures and perceptual fidelity.
             </p>
           </div>
 
@@ -406,7 +336,7 @@
   year    = {2026},
   url     = {https://openreview.net/forum?id=AXDgXSIOqi}
 } -->
-</code></pre>
+        </code></pre>
       </div>
     </section>
     <!--End BibTex citation -->
